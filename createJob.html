@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job</title>
+</head>
+<body>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+             background-color: rgba(247, 117, 117, 0.808);
+            justify-content: space-around;  
+            padding: 20px;
+        }
+        nav h1{
+            font-size: 50px;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 30px;
+            
+        }
+        nav ul li a{
+            margin-right: 10px;
+        text-decoration: none;
+    list-style-type: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-right: 50px;
+    font-size: 25px;
+    color: darkmagenta;
+}
+nav span{
+ color:  rgb(139, 0, 30);
+}
+.job h1{
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+}
+
+.job span{
+    color: darkmagenta;
+}
+.job p{
+    text-align: center;
+    font-size: 25px;
+    padding: 20px;
+}
+.form h1{
+    font-size: 35px;
+    text-align: center;
+    padding: 20px;
+}
+.form{
+    background-color:rgb(151, 228, 247);
+    border: 1px solid antiquewhite;
+    border-radius: 10px;
+    width: 50%;
+    height: 50%;
+    margin-left: 290px;
+    padding: 30px;
+   
+}
+
+.form input{
+   align-items: center;
+    margin:5px;
+   margin-left: 150px;
+   padding: 10px;
+   border-radius: 10px;
+}
+.form button{
+    margin-left: 400px;
+    padding: 10px;
+    color: black;
+    background-color: rgb(236, 99, 151);
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+button:hover{
+    background-color:rgb(240, 55, 126) ;
+}
+.jobcard{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+      grid-template-columns: repeat(4,1fr);
+     padding: 20px;
+   
+
+}
+
+.job_card_header{
+   
+   background-color: antiquewhite;
+   padding: 40px;
+    border-radius: 10px;
+   width: 300px;
+    border: 0.5px ;
+    margin: 15px;
+   /* height: 310px; */
+ /* padding-top: 90px; */
+    /* flex:20px 20px 50%; */
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+.job_card_header img {
+  max-width: 40px;
+  padding: 10px;
+  border-radius: 100%; 
+  background-color: white; 
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin-left: 100px;
+}
+.job_card_header h5 {
+  text-align: center;
+  font-size: 30px;
+  color: darkmagenta;
+}
+.job_card_header h6 {
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+.job_card_header h4{
+  font-size: 20px;
+  text-align: center;
+  padding: 5px;
+}
+.job_card_header p{
+  font-size: 15px;
+  text-align: center;
+}
+.job_card_header button {
+  margin: 20px;
+  margin-left: 100px;
+  color: black;
+    background-color: rgb(236, 99, 151);
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 10px;
+}
+.job_card_header button:hover{
+    background-color:rgb(240, 55, 126) ;
+}
+#salary{
+  margin-right: 500px;
+}
+#description{
+ width: 50%;
+ height: 50%;
+}
+  
+
+</style>
+<body>
+  <nav>
+    <h1>Job <span>Portal</span></h1>
+  
+        <ul>
+            <li><a href="index.html">Home</a></li> 
+             <li><a href="about.html">About</a></li>
+             <li><a href="createJob.html">Jobs</a></li>
+             <li><a href="Services.html">Services</a></li>
+             <li><a href="Contact.html">Contact</a></li>
+           
+         </ul>
+</nav>
+ <section>
+    <div class="job">
+        <h1>Latest & <span>Top Job openings</span></h1>
+        <p>Discover Exciting New Opportunities and High-Demand Positions Available Now in Top Industries and Companies</p>
+
+    </div>
+    <div class="form">
+    <h1>Create Job</h1>
+
+        <form id="jobForm">
+            <input id="jobTittle" name="jobTittle" type="text" placeholder="Job Tittle"> <textarea row="4" id="description" name="description" type="text" placeholder="Description"></textarea><br>
+            <input name="location" id="location" type="text" placeholder="Location"> <input name="salary" id="salary" type="number" placeholder="Salary">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div class="jobcard">
+        <div class="job_card_header">
+          <img src="images/amazon1.jpg" alt="job" />
+          <div>
+            <h5>Amazon</h5>
+            <h6>USA</h6>
+          </div>
+        
+        <h4>Front-end Developer</h4>
+        <p>
+          Design and implement user interfaces using HTML, CSS, and
+          JavaScript, collaborating closely with designers and back-end
+          developers.
+        </p>
+        <button class="details"  >View Details</button>
+        <div class="view" style="display: none;" >
+          <span>20 Positions</span>
+          <span>Full Time</span>
+          <span>$1,01,000/Year</span>
+        </div>
+     
+        </div>
+ 
+        <div class="job_card_header">
+          <img src="images/linkedin.png" alt="job" />
+          <div>
+            <h5>LinkedIn</h5>
+          <h6>Germany</h6>
+        </div>
+     
+      <h4>Full Stack Developer</h4>
+      <p>
+        Develop and maintain both front-end and back-end components of web
+        applications, utilizing a wide range of programming languages and
+        frameworks.
+      </p>
+      <button class="details">View Details</button>
+      <div class="view" style="display: none;">
+        <span>50 Positions</span>
+          <span>Full Time</span>
+          <span>$2,01,000/Year</span>
+
+      </div>
+    </div>
+    
+   
+      <div class="job_card_header">
+        <img src="images/twitter.png" alt="job" />
+        <div>
+          <h5>Twitter</h5>
+          <h6>USA</h6>
+        </div>
+     
+      <h4>ReactJS Developer</h4>
+      <p>
+        Specialize in building dynamic and interactive user interfaces using
+        the ReactJS library, leveraging your expertise in JavaScript and
+        front-end development.
+      </p>
+      <button class="details">View Details</button>
+      <div class="view" style="display: none;">
+        <span>500 Positions</span>
+          <span>Full Time</span>
+          <span>$4,01,000/Year</span>
+
+      </div>
+    </div>
+    
+      <div class="job_card_header">
+        <img src="images/microsoft.jpeg" alt="job" />
+        <div>
+          <h5>Microsoft</h5>
+          <h6>USA</h6>
+        </div>
+      
+      <h4>Python Developer</h4>
+      <p>
+        Develop scalable and efficient backend systems and applications
+        using Python, utilizing your proficiency in Python programming and
+        software development.
+      </p>
+      
+      <button class="details">View Details</button>
+      <div class="view" style="display: none;">
+        <span>200 Positions</span>
+          <span>Night Shift</span>
+          <span>$5,01,000/Year</span>
+
+      </div>
+  </div>
+   
+ </section>
+ <script>
+    
+    // this.reset();
+    const jobForm = document.getElementById("jobForm");
+
+jobForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const jobTittle = document.getElementById("jobTittle").value.trim();
+    const description = document.getElementById("description").value.trim();
+    const location = document.getElementById("location").value.trim();
+    const salary = document.getElementById("salary").value.trim();
+
+    // Check if any of the fields are empty
+    if (!jobTittle || !description || !location || !salary) {
+        alert("Please fill in all fields before submitting.");
+        return; // Stop further execution if validation fails
+    }
+
+    const job = {
+        jobTittle,
+        description,
+        location,
+        salary
+    };
+
+    let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+    jobs.push(job);
+    localStorage.setItem("jobs", JSON.stringify(jobs));
+
+    alert("Job Saved Successfully");
+});
+ 
+ let isOpen = true;
+const view = document.querySelectorAll(".view");
+const detail = document.querySelectorAll(".details");
+
+detail.forEach((button, index) => {
+    button.addEventListener("click", () => {
+        if (view[index].style.display === "none" || view[index].style.display === "") {
+            view[index].style.display = "block";
+        } else {
+            view[index].style.display = "none";
+        }
+    });
+});
+    
+    
+   
+ </script>
+</body>
+
+</html>

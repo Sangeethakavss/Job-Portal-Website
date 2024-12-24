@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         *{
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            display: flex;
+             background-color:  rgba(247, 117, 117, 0.808);
+            justify-content: space-around;  
+            padding: 20px;
+        }
+        nav h1{
+            font-size: 50px;
+        }
+        nav ul{
+            display: flex;
+        }
+        nav ul li{
+            list-style: none;
+            padding: 30px;
+            
+        }
+        nav ul li a{
+            margin-right: 10px;
+        text-decoration: none;
+    list-style-type: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-right: 50px;
+    font-size: 25px;
+    color: darkmagenta;
+}
+ nav span{
+    color: rgb(139, 0, 30);
+}
+span{
+    color: darkmagenta;
+}
+
+.Home{
+    background-image: url(images/p\ 17.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /* background-blend-mode: darken; */
+    /* color: whitesmoke; */
+    
+}
+.Home h1{
+    font-size: 50px;
+    text-align: center;
+    padding: 40px;
+    
+}
+
+.Home p {
+    font-size: 25px;
+    text-align: center;
+    padding: 40px;
+   
+}
+.Home h2{
+    text-align: center;
+    font-size: 50px;
+}
+.Home h4{
+    text-align: center;
+    font-size: 35px;
+    padding: 20px;
+}
+.buttonss{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+.btn{
+     margin-left: 550px;  
+    
+    background-color: rgb(238, 195, 219);
+    font-size: 20px;
+    border-radius: 10px;
+    /* gap: 2rem; */
+    width:30%;
+    padding: 10px;
+}
+
+.btns{
+    margin-right: 550px; 
+     
+     padding: 10px;
+    background-color: rgb(238, 195, 219);
+    font-size: 20px;
+    border-radius: 10px;
+    width: 30%;
+}
+.popup-form {
+      display: none;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border: 2px solid #888;
+      border-radius: 10px;
+      z-index: 9;
+      width: 300px;
+      padding: 70px;
+      background-color: antiquewhite;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .popup-form h2{
+        font-size: 30px;
+        text-align: center;
+
+    }
+
+    /* Style for the form inputs */
+    .popup-form input[type="text"], .popup-form input[type="email"], .popup-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0 15px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    /* Close button */
+    .close-btn {
+      background-color: red;
+      color: white;
+      border-radius: 3px;
+      /* margin: 0px 150px; */
+      cursor: pointer;
+      padding: 10px; 
+      border: none;
+      margin-left: 75px;
+     }
+.signup-btn{
+    background-color: green;
+      color: white;
+      border: none;
+      padding: 10px;
+      /* margin: 0px 150px; */
+      cursor: pointer;
+     border-radius: 3px;
+     margin-left: 75px;
+}
+.signin-btn{
+    background-color: green;
+      color: white;
+      border: none;
+      padding: 10px;
+      /* margin: 0px 150px; */
+      cursor: pointer;
+     border-radius: 3px;
+     margin-left: 75px; 
+}
+                 
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Job <span>Portal</span></h1>
+      
+            <ul>
+                <li><a href="index.html">Home</a></li> 
+                 <li><a href="about.html">About</a></li>
+                 <li><a href="createJob.html">Jobs</a></li>
+                 <li><a href="Services.html">Services</a></li>
+                 <li><a href="Contact.html">Contact</a></li>
+               
+             </ul>
+ </nav>
+
+    <section id="#Home">
+        <div class="Home">
+            <h1>Search, Apply<br>Get Your <span>Dream Job</span></h1>
+            <p>Your future starts here. Discover countless opportunities ,take action by<br> applying to jobs that match your skills and aspirations , and transform your career</p>
+            <h2>Get Hired in <span>4 Quick Easy steps</span></h2>
+            
+            <p>Follow Our Simple, Step-by-Step Guide to Quickly Land Your Dream Job<br>and Start Your New Career Journey</p>
+            <div class="buttonss">
+                <button class="btn" onclick="openSignUpForm()">Sign Up</button>
+                <button class="btns" onclick="openSignInForm()">Sign In</button>
+            </div>
+           
+            <h4><span>See!!</span> How It Works??</h4>
+        </div>
+    
+        <!-- Sign-Up Form -->
+        <div class="popup-form" id="signupForm">
+            <h2>Sign Up Form</h2>
+            <form id="formElement" onsubmit="storeFormData(event)">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br>
+    
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br>
+    
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required><br>
+    
+                <button type="submit" class="signup-btn">Submit</button>
+                <button type="button" class="close-btn" onclick="closeSignUpForm()">Close</button>
+            </form>
+        </div>
+    
+        <!-- Sign-In Form -->
+        <div class="popup-form" id="signinForm">
+            <h2>Sign In</h2>
+            <form onsubmit="validateSignIn(event)">
+                <label for="signinEmail">Email:</label>
+                <input type="email" id="signinEmail" name="signinEmail" required><br>
+    
+                <label for="signinPassword">Password:</label>
+                <input type="password" id="signinPassword" name="signinPassword" required><br>
+    
+                <button type="submit" class="signin-btn">Sign In</button>
+                <button type="button" class="close-btn" onclick="closeSignInForm()">Close</button>
+            </form>
+        </div>
+    
+        <script>
+            // Function to open the Sign-Up form and hide the Sign-In form
+            function openSignUpForm() {
+                document.getElementById("signupForm").style.display = "block";
+                document.getElementById("signinForm").style.display = "none"; // Hide the Sign-In form
+            }
+    
+            // Function to open the Sign-In form and hide the Sign-Up form
+            function openSignInForm() {
+                document.getElementById("signinForm").style.display = "block";
+                document.getElementById("signupForm").style.display = "none"; // Hide the Sign-Up form
+            }
+    
+            // Function to close the Sign-Up form
+            function closeSignUpForm() {
+                document.getElementById("signupForm").style.display = "none";
+            }
+    
+            // Function to close the Sign-In form
+            function closeSignInForm() {
+                document.getElementById("signinForm").style.display = "none";
+            }
+    
+            // Function to store Sign-Up form data in localStorage
+            function storeFormData(event) {
+                event.preventDefault(); // Prevent form submission (no page refresh)
+    
+                const name = document.getElementById("name").value;
+                const email = document.getElementById("email").value;
+                const password = document.getElementById("password").value;
+    
+                // Store data in localStorage
+                localStorage.setItem("name", name);
+                localStorage.setItem("email", email);
+                localStorage.setItem("password", password);
+    
+                alert("Sign-Up Successful!");
+    
+                // Reset the form and close it
+                document.getElementById("formElement").reset();
+                closeSignUpForm();
+            }
+    
+            // Function to validate Sign-In credentials
+            function validateSignIn(event) {
+                event.preventDefault(); // Prevent form submission (no page refresh)
+    
+                const storedEmail = localStorage.getItem("email");
+                const storedPassword = localStorage.getItem("password");
+    
+                const inputEmail = document.getElementById("signinEmail").value;
+                const inputPassword = document.getElementById("signinPassword").value;
+    
+                // Check if input matches stored data
+                if (inputEmail === storedEmail && inputPassword === storedPassword) {
+                    alert("Sign-In Successful!");
+                } else {
+                    alert("Incorrect email or password.");
+                }
+            }
+    
+            // Optional: Reset the forms when the page loads
+            window.onload = function() {
+                const form = document.getElementById("formElement");
+                if (form) {
+                    form.reset(); // Reset the form fields when the page loads
+                }
+            };
+        </script>
+    
+</section>
+   
+</body>
+</html>
